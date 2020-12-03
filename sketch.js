@@ -21,8 +21,8 @@ function draw() {
   streams.forEach(x => x.render());
   fill(255);
   textAlign(CENTER);
-  let t = "Have a Nice 🤙🏾".toUpperCase();
-  text(t, width / 2, height / 2);
+  let haveANice = "Have a Nice 🤙🏾".toUpperCase();
+  text(haveANice, width / 2, height / 2);
 }
 
 class MSymbol {
