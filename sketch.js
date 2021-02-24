@@ -18,11 +18,16 @@ function setup() {
 
 function draw() {
   background(0, 130);
-  streams.forEach(x => x.render());
+  streams.forEach((x) => x.render());
   fill(255);
   textAlign(CENTER);
   let haveANice = "Have a Nice 🤙🏾".toUpperCase();
   text(haveANice, width / 2, height / 2);
+}
+
+// p5 WILL AUTO RUN THIS FUNCTION IF THE BROWSER WINDOW SIZE CHANGES
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 class MSymbol {
@@ -81,6 +86,6 @@ class Stream {
   }
 
   render() {
-    this.symbols.forEach(symbol => symbol.render());
+    this.symbols.forEach((symbol) => symbol.render());
   }
 }
